@@ -1,0 +1,83 @@
+**Profile Perusahaan "AutoParts360"**
+AutoParts360 adalah sebuah perusahaan yang telah beroperasi di industri penjualan sparepart kendaraan selama lebih dari 20 tahun. Sebagai perusahaan keluarga, kami memiliki komitmen kuat untuk menyediakan layanan berkualitas tinggi kepada pelanggan kami. Dengan pengalaman yang luas dan pengetahuan mendalam tentang dunia otomotif, kami menjadi tujuan utama bagi pelanggan yang mencari berbagai macam sparepart mobil dan motor dari berbagai merek dan model.
+**Visi Perusahaan**
+Visi kami adalah menjadi penyedia terkemuka dalam industri sparepart kendaraan, dengan fokus pada kepuasan pelanggan, inovasi produk, dan pelayanan yang handal.
+**Misi Perusahaan**
+Misi kami adalah menyediakan sparepart kendaraan berkualitas tinggi dengan harga yang kompetitif. Kami berkomitmen untuk memastikan ketersediaan stok yang luas dan memberikan pengalaman belanja yang mudah dan menyenangkan bagi pelanggan kami. Selain itu, kami juga berupaya untuk memberikan informasi dan edukasi kepada pelanggan kami tentang perawatan kendaraan dan pemilihan sparepart yang tepat.
+**Nilai Perusahaan**
+1. **Kualitas**: Kami selalu mengutamakan kualitas produk dan layanan. Setiap produk yang kami tawarkan telah melalui proses seleksi ketat untuk memastikan keandalan dan kinerja terbaik.
+2. **Kepercayaan**: Kami berkomitmen untuk membangun hubungan yang kuat dengan pelanggan kami berdasarkan kepercayaan dan integritas. Kejujuran dan transparansi adalah pilar dari hubungan kami dengan pelanggan.
+3. **Pelayanan Pelanggan**: Kepuasan pelanggan adalah prioritas utama kami. Kami berusaha untuk memberikan pelayanan pelanggan yang ramah, responsif, dan membantu dalam setiap interaksi.
+4. **Inovasi**: Kami selalu mencari cara untuk terus berinovasi dan memperluas jangkauan produk kami. Kami berkomitmen untuk mengikuti perkembangan terkini dalam industri otomotif.
+
+
+**Produk dan Layanan**
+AutoParts360 menawarkan beragam produk berkualitas tinggi, termasuk sparepart mesin, sistem rem, sistem suspensi, komponen listrik, dan banyak lagi untuk kendaraan roda dua dan roda empat. Setiap produk dilengkapi dengan deskripsi detail dan informasi ketersediaan stok untuk memudahkan pelanggan dalam pemilihan dan pembelian.
+**Mitra dan Kemitraan**
+Kami menjalin kemitraan dengan berbagai merek dan pemasok terkemuka dalam industri otomotif untuk memastikan ketersediaan produk terbaik dan harga yang kompetitif bagi pelanggan kami.
+Dengan berpegang teguh pada nilai-nilai kami, AutoParts360 siap untuk memberikan pengalaman belanja sparepart kendaraan yang unggul bagi para pelanggan kami. Kami berkomitmen untuk terus tumbuh dan berkembang, serta memberikan layanan terbaik bagi seluruh komunitas otomotif. Terima kasih telah memilih AutoParts360 sebagai mitra pilihan Anda dalam kebutuhan sparepart kendaraan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Fitur yang harus ada di website sparepart kendaraan:**
+1. Katalog Produk: Menampilkan semua produk dengan halaman detail untuk setiap produk.
+2. Keranjang Belanja dan Checkout: Memungkinkan pengguna menambahkan produk ke keranjang dan melakukan pembayaran.
+3. Pembayaran Online: Berbagai metode pembayaran seperti kartu kredit/debit, transfer bank, dan dompet digital.
+4. Pencarian dan Filter Produk: Mencari produk berdasarkan kata kunci dan memfilter produk berdasarkan kategori, harga, merek, dll.
+5. Pendaftaran dan Login Pengguna: Termasuk opsi untuk mereset password dan login menggunakan Google.
+6. Pelacakan Pesanan: Memungkinkan pengguna untuk melacak status pesanan mereka.
+7. Ulasan dan Rating Produk: Memberikan pengguna kesempatan untuk menulis ulasan dan memberikan rating.
+8. Halaman Kontak dan Layanan Pelanggan: Form kontak atau live chat dan halaman FAQ.
+9. Responsif untuk Semua Perangkat: Website yang mudah digunakan pada semua jenis perangkat.
+10. SEO Friendly: Website yang dioptimalkan untuk mesin pencari.
+11. Integrasi Media Sosial: Membagikan produk di media sosial dan ikon yang mengarah ke akun media sosial.
+12. Brosur yang Dapat Diunduh: Brosur dengan informasi detail tentang produk atau layanan.
+13. Layanan Konsultasi: Chat langsung, form konsultasi, dan jadwal konsultasi.
+14. Blog atau Artikel: Konten edukatif tentang perawatan kendaraan, pemilihan sparepart yang tepat, dll.
+15. Program Loyalitas: Memberikan insentif kepada pelanggan untuk melakukan pembelian berulang.
+16. Newsletter atau Berlangganan Email: Memperbarui pelanggan tentang produk baru, penawaran, atau berita perusahaan.
+17. Wishlist: Memungkinkan pengguna untuk menyimpan dan melacak produk yang mereka minati.
+18. Fitur Diskon: Mengizinkan penggunaan kode diskon saat checkout dan promosi diskon.
+
+**Backend atau Halaman Admin:**
+1. Manajemen Produk: Menambahkan, mengedit, dan menghapus produk, mengatur harga, dan mengelola inventaris.
+2. Manajemen Pesanan: Melihat detail pesanan, memperbarui status pengiriman, dan mengelola pengembalian atau penggantian produk.
+3. Manajemen Pelanggan: Melihat informasi pelanggan, aktivitas pembelian, dan mengelola pertanyaan atau komplain.
+4. Manajemen Diskon dan Promosi: Mengatur dan mengelola diskon, kode kupon, dan promosi lainnya.
+5. Laporan dan Analisis: Memahami tren penjualan, produk populer, dan data pelanggan.
+
+**Data yang Diperlukan untuk Registrasi:**
+1. Nama Lengkap
+2. Alamat Email
+3. Nomor Telepon
+4. Alamat Rumah
+5. Tanggal Lahir
+6. Kata Sandi
+7. Opsi Opt-in untuk Email Promosi atau Newsletter
+
+
+
+**Informasi Produk:**
+1. Nama Produk
+2. Kategori Produk
+3. Merek
+4. Deskripsi Produk
+5. Harga
+6. Gambar Produk
+7. Stok
+8. Berat dan Dimensi Produk
+9. Pilihan Pengiriman
+10. Rating dan Ulasan Produk
+
+Semoga ini bisa membantu Anda dalam merencanakan dan membangun situs eCommerce Anda. Jika ada pertanyaan atau topik lain yang ingin Anda bahas, jangan ragu untuk menanyakannya.
