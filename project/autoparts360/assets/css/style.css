@@ -1,0 +1,197 @@
+/* styles.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styles */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #007bff; /* Light Blue */
+  border-radius: 5px;
+}
+
+/* Navbar styles */
+.navbar {
+  background: linear-gradient(to right, #003366, #000000); /* Dark blue to black gradient */
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #fff; /* White */
+}
+
+.navbar-nav .nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #fff; /* White */
+}
+
+/* Navbar styles when scrolled */
+.navbar-scrolled {
+  background: rgba(0, 51, 102, 0.9); /* Transparent when navbar is scrolled */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for Font Awesome icons */
+.navbar-nav .nav-link i {
+  margin-right: 5px;
+  color: #fff; /* White */
+}
+
+/* Hero section styles with unique gradient */
+.hero-section {
+  background: linear-gradient(to right, #003366, #000000); /* Dark blue to black gradient */
+  color: #fff; /* White */
+  min-height: 100vh; /* Set minimum height to full viewport height */
+  display: flex;
+  align-items: center;
+}
+
+.hero-section h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #fff; /* White */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.hero-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #fff; /* White */
+  margin-bottom: 40px; /* Add some space below the paragraph */
+}
+
+.hero-section .btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+/* Carousel styles */
+.carousel-item img {
+  height: 400px; /* Set carousel image height to full viewport height */
+  object-fit: cover;
+}
+
+/* About section styles with unique gradient */
+.about-section {
+  background: linear-gradient(to right, #f1f1f1, #d3d3d3); /* Light Grey to Dark Grey gradient */
+  padding: 100px 0;
+}
+
+.about-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #000; /* Black */
+}
+
+.about-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #333; /* Dark Grey */
+}
+
+.about-section .btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.language-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001; /* Higher z-index than the navbar to keep it on top */
+}
+
+.language-toggle button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.language-toggle button:focus {
+  outline: none;
+}
+
+/* Custom styles for Contact Us form */
+/* Custom styles for Contact Us section */
+.contact-section {
+  background-color: #002147; /* Dark Blue */
+  color: #fff; /* White */
+  padding: 100px 0;
+}
+
+.contact-section .form-group label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #fff; /* White */
+}
+
+.contact-section .form-control {
+  border: 1px solid #fff; /* White border */
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #000; /* Black text color */
+  background-color: #fff; /* White background color */
+}
+
+.contact-section .form-control::placeholder {
+  color: #666; /* Placeholder text color */
+}
+
+.contact-section .btn-primary {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: #007bff; /* Light Blue */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+  background-color: #0056b3; /* Darker shade of Light Blue on hover */
+  cursor: pointer;
+}
+
+/* CSS for fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+.success-message {
+  display: none;
+}
+
+.success-message.show {
+  display: block;
+}

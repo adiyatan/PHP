@@ -1,0 +1,13 @@
+changelog project=
+
+membuat halaman beranda (home page), terdapat navbar yang berisikan logo dan nama perusahaan, katalog, keranjang, login dan kontak (done)
+membuat halaman utama dengan pencarian dan filter product
+menampilkan banner promo dan penawaran
+menampilkan kategori produk populer
+menampilkan testimoni dan ulasan
+menampilkan ikhtisan blog/artikel
+menampilkan footer (done)
+
+boostrap yang akan dipakai=
+form = floating labels , layout, validation
+component = alert, bagde, card, carousel, modal, navbar,off canvas, pagination,scrollspy,toast
