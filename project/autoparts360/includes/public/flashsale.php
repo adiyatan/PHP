@@ -1,169 +1,3 @@
-<style>
-  /* Navbar Styles */
-  .navbar {
-    position: sticky;
-    top: 0;
-    background-color: #f8f9fa;
-    z-index: 1000;
-  }
-
-  .navbar-brand {
-    font-weight: bold;
-    color: #0047ab;
-  }
-
-  .nav-link {
-    color: #333;
-  }
-
-  .form-control {
-    border-color: #ccc;
-  }
-
-  .btn-outline-primary {
-    border-color: #0047ab;
-    color: #0047ab;
-  }
-
-  .btn-outline-primary:hover {
-    background-color: unset;
-    color: #0047ab;
-  }
-
-  .btn-primary {
-    background-color: #0047ab;
-    color: #fff;
-  }
-
-  .btn-primary:hover {
-    background-color: #0047ab;
-    color: #fff;
-  }
-</style>
-
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="about/index.php">AutoParts360</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item nav-item-category">
-          <a class="nav-link" href="#">Category</a>
-        </li>
-      </ul>
-      <form class="d-flex flex-grow-1">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      </form>
-      <ul class="navbar-nav ms-3">
-        <li class="nav-item">
-          <a class="nav-link btn-outline-primary" href="#">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn-primary" href="#">Regist</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-//badge
-<style>
-    .badge-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* More space at the top */
-    }
-
-    .badge-box {
-        width: 300px;
-        height: 150px;
-        border-radius: 15px;
-        text-align: left;
-        padding: 20px;
-        /* More padding */
-        margin: 20px;
-        /* More margin */
-        color: #fff;
-        font-weight: bold;
-        font-size: 24px;
-        /* Larger text */
-        display: flex;
-        align-items: center;
-        background: linear-gradient(to bottom right, #007bff, #00bfff);
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
-        /* Darker shadow */
-        transition: all 0.5s ease;
-        /* Animation on hover */
-        cursor: pointer;
-    }
-
-    .badge-box:hover {
-        transform: scale(1.1);
-        /* Scale up more on hover */
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
-        /* Darker and larger shadow on hover */
-    }
-
-    .badge-icon {
-        font-size: 64px;
-        /* Larger icon */
-        margin-right: 20px;
-        /* More margin */
-        color: rgba(255, 255, 255, 0.9);
-        /* Slightly translucent icons */
-    }
-
-    /* Gradients for icons */
-    .car-icon {
-        background: linear-gradient(to bottom right, #003876, #0066ff);
-    }
-
-    .motorcycle-icon {
-        background: linear-gradient(to bottom right, #007526, #00ff44);
-    }
-
-    .other-icon {
-        background: linear-gradient(to bottom right, #920024, #ff003b);
-    }
-</style>
-
-<!-- //badge -->
-<div class="badge-container">
-    <div class="row">
-        <!-- Kotak 1: Mobil -->
-        <div class="col-md-4">
-            <div class="badge-box car-icon">
-                <div class="badge-icon">
-                    <i class="fas fa-car"></i>
-                </div>
-                <span>Mobil</span>
-            </div>
-        </div>
-        <!-- Kotak 2: Motor -->
-        <div class="col-md-4">
-            <div class="badge-box motorcycle-icon">
-                <div class="badge-icon">
-                    <i class="fas fa-motorcycle"></i>
-                </div>
-                <span>Motor</span>
-            </div>
-        </div>
-        <!-- Kotak 3: Lainnya -->
-        <div class="col-md-4">
-            <div class="badge-box other-icon">
-                <div class="badge-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <span>Other</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-//flashale
 <?php
 require 'includes/functions.php';
 $flahsales = query("SELECT * FROM products");
@@ -515,8 +349,8 @@ function calculateStars($rating, $reviewCount)
 <div class="container mt-1  fade-in">
     <div class="custom-container" style="background-color:#fff; border-radius: 2%;"">
         <div class=" flashsale-header d-flex justify-content-between align-items-center mb-5">
-        <h2 class="mb-0">Flashsale</h2>
-        <div id="clock" class="d-flex align-items-center">
+        <h2 class="mb-0">Flashsale end in:</h2>
+        <div id="clock" class="d-flex align-items-center clock-container">
             <div class="mx-1 clock-part">
                 <span id="countdown-days" class="display-6"></span>
                 <span class="clock-label">Days</span>
@@ -538,72 +372,113 @@ function calculateStars($rating, $reviewCount)
 
     <!-- flashsale -->
     <div class="containerFlashsale">
-        <div class="row">
+        <div class="row" id="flashsaleLink">
             <!-- Place Swiper container here -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <?php foreach ($flahsales as $flashsale) :
-                        // Simpan rating dan jumlah review dalam variabel (misalnya, diambil dari database)
-                        $rating = $flashsale["rating"];
-                        $reviewCount = isset($flashsale["review_count"]) ? $flashsale["review_count"] : 0;
-                        $stars = calculateStars($rating, $reviewCount);
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($flahsales as $flashsale) :
+                            // Simpan rating dan jumlah review dalam variabel (misalnya, diambil dari database)
+                            $rating = $flashsale["rating"];
+                            $reviewCount = isset($flashsale["review_count"]) ? $flashsale["review_count"] : 0;
+                            $stars = calculateStars($rating, $reviewCount);
 
-                        $originalPrice = $flashsale["price"];
-                        $discountedPrice = $originalPrice * 0.2;
-                    ?>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img src="assets/img/<?= $flashsale["image"] ?>" class="card-img-top" alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?= $flashsale["name"] ?></h5>
-                                    <p class="card-text">
-                                        <span class="original-price">
-                                            <s>Rp. <?= number_format($originalPrice) ?></s>
-                                        </span>
-                                        <br>
-                                        <span class="discounted-price">
-                                            Rp. <?= number_format($discountedPrice) ?>
-                                        </span>
-                                    </p>
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <?php
-                                            // Tampilkan bintang sesuai hasil perhitungan
-                                            for ($i = 1; $i <= 5; $i++) {
-                                                if ($i <= $stars) {
-                                                    echo '<i class="fas fa-star text-warning"></i>';
-                                                } elseif ($i - 0.5 <= $stars) {
-                                                    echo '<i class="fas fa-star-half-alt text-warning"></i>';
-                                                } else {
-                                                    echo '<i class="far fa-star text-warning"></i>';
+                            $originalPrice = $flashsale["price"];
+                            $discountedPrice = $originalPrice * 0.2;
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="assets/img/<?= $flashsale["image"] ?>" class="card-img-top" alt="Product Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $flashsale["name"] ?></h5>
+                                        <p class="card-text">
+                                            <span class="original-price">
+                                                <s>Rp. <?= number_format($originalPrice) ?></s>
+                                            </span>
+                                            <br>
+                                            <span class="discounted-price placeholder">
+                                                Rp. <?= number_format($discountedPrice) ?>
+                                            </span>
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <?php
+                                                // Tampilkan bintang sesuai hasil perhitungan
+                                                for ($i = 1; $i <= 5; $i++) {
+                                                    if ($i <= $stars) {
+                                                        echo '<i class="fas fa-star text-warning"></i>';
+                                                    } elseif ($i - 0.5 <= $stars) {
+                                                        echo '<i class="fas fa-star-half-alt text-warning"></i>';
+                                                    } else {
+                                                        echo '<i class="far fa-star text-warning"></i>';
+                                                    }
                                                 }
-                                            }
-                                            ?>
-                                        </div>
-                                        <div>
-                                            <span class="badge bg-primary">Stock = <?= $flashsale["stock"] ?></span>
+                                                ?>
+                                            </div>
+                                            <div>
+                                                <span class="badge bg-primary">Stock = <?= $flashsale["stock"] ?></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-            </div>
             <!-- End of Swiper container -->
         </div>
     </div>
     <div class="see-more-container">
-        <a href="" class="see-more">See more</a>
+        <a href="#" id="seeMoreButton" class="see-more">See more</a>
     </div>
+
 </div>
 </div>
+
+<?php include 'includes/public/toast.php'; ?>
+
+<script>
+    // JavaScript code to handle the toast functionality when the flashsale is clicked
+    document.addEventListener("DOMContentLoaded", function() {
+        const flashsaleLink = document.getElementById("flashsaleLink");
+        const seeMoreButton = document.getElementById("seeMoreButton");
+        const toast = new bootstrap.Toast(document.querySelector(".toast"));
+
+        flashsaleLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            // Here, you can check if the user is logged in or not
+            const isLoggedIn = false; // Replace 'false' with your logic to check if the user is logged in
+
+            if (!isLoggedIn) {
+                toast.show();
+            } else {
+                // Add the logic to navigate to the flashsale page if the user is logged in
+                window.location.href = "your_flashsale_page.php"; // Replace with the actual URL
+            }
+        });
+
+        seeMoreButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            // Here, you can check if the user is logged in or not
+            const isLoggedIn = false; // Replace 'false' with your logic to check if the user is logged in
+
+            if (!isLoggedIn) {
+                toast.show();
+            } else {
+                // Add the logic to navigate to the "See more" page if the user is logged in
+                window.location.href = "your_see_more_page.php"; // Replace with the actual URL
+            }
+        });
+    });
+</script>
+
 
 <script>
     // Function to update the timer
     function updateTimer() {
         const now = new Date();
-        const end = new Date("2023-08-01");
+        const end = new Date("2023-08-30");
         const distance = end - now;
 
         // Calculate days, hours, minutes, and seconds
@@ -639,6 +514,24 @@ function calculateStars($rating, $reviewCount)
             loop: true,
             swipe: true,
         });
+
+        // Function to move Swiper to the next slide every 5 seconds
+        function moveSwiperToNextSlide() {
+            swiper.slideNext();
+        }
+
+        // Set the interval to move the Swiper
+        const swiperInterval = setInterval(moveSwiperToNextSlide, 5000);
+
+        // Stop the interval when the user interacts with Swiper
+        swiper.on("pointerDown", function() {
+            clearInterval(swiperInterval);
+        });
+
+        // Restart the interval when the user stops interacting with Swiper
+        swiper.on("pointerUp", function() {
+            swiperInterval = setInterval(moveSwiperToNextSlide, 5000);
+        });
     });
 </script>
 
@@ -653,4 +546,32 @@ function calculateStars($rating, $reviewCount)
             swipe: true,
         });
     });
+</script>
+
+<script>
+    // Function to show the alert for containerFlashsale on mobile devices
+    function showMobileAlert() {
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        const containerFlashsale = document.querySelector('.containerFlashsale');
+        const alertContainer = document.createElement('div');
+        alertContainer.innerHTML = `
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Sorry!</h4>
+        <p>This page is not yet available on mobile, only available on the desktop version</p>
+        <hr>
+        <p class="mb-0">Please use a desktop version device</p>
+      </div>
+    `;
+
+        if (isMobile) {
+            containerFlashsale.innerHTML = '';
+            containerFlashsale.appendChild(alertContainer);
+        }
+    }
+
+    // Call the function to show the alert
+    showMobileAlert();
+
+    // Re-run the function on window resize to handle orientation change
+    window.addEventListener('resize', showMobileAlert);
 </script>
